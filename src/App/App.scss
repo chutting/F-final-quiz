@@ -18,14 +18,20 @@
 
 .student-item {
   padding: 5px;
+  height: 32px;
   background-color: #eeeeee;
   text-align: center;
 }
 
-.add-student-button {
+#add-student-button {
   background-color: transparent;
   border: 1px solid #929aab;
   height: 30px;
-  margin: 14px 0;
+  margin-bottom: 14px;
   outline: none;
+  font-size: 10px;
+}
+
+#add-student-button:hover {
+  color: black;
 }
