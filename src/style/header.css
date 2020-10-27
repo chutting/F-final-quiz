@@ -1,12 +1,11 @@
 .container {
-  width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .group-list-header {
-  width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -24,4 +23,32 @@
   font-size: 10px;
   line-height: 10px;
   outline: none;
+}
+
+.group-list-visble {
+  display: block;
+}
+
+.group-list-unvisble {
+  display: none;
+}
+
+.group-name {
+  padding: 5px;
+  margin: 0;
+  background-color: #929aab;
+  color: white;
+  text-align: center;
+}
+
+.student-group-container {
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 10%);
+  grid-column-gap: 10px;
+}
+
+.group-container {
+  border: 1px solid #929aab;
+  margin: 20px 0;
 }
