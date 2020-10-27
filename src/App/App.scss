@@ -1,2 +1,31 @@
-.App {
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 90%;
+  background-color: #f7f7f7;
+}
+
+.student-list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 10%);
+  justify-content: space-between;
+}
+
+.student-item {
+  padding: 5px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.add-student-button {
+  background-color: transparent;
+  border: 1px solid #929aab;
+  height: 30px;
+  margin: 14px 0;
+  outline: none;
 }

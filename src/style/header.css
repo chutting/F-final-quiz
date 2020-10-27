@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.group-list-header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.group-list-header p {
+  font-weight: bold;
+}
+
+.grouping-button {
+  background-color: #ea5455;
+  padding: 3px 30px;
+  border: none;
+  color: white;
+  font-size: 10px;
+  line-height: 10px;
+  outline: none;
+}
