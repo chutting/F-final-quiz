@@ -31,10 +31,9 @@ class StudentList extends Component {
       mode: 'cors'
     }).then(response => {
       if (response.status === 201) {
-        location.reload() 
+        history.go(0);
       }
     });
-
     this.setState({
       visible: false,
     });
