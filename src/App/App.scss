@@ -88,3 +88,28 @@
 h1 {
   font-size: 20px;
 }
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .group-list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .grouping-button {
+      background-color: $primary-color;
+      padding: 3px 30px;
+      border: none;
+      color: white;
+      font-size: 10px;
+      line-height: 10px;
+      outline: none;
+      height: 32px;
+    }
+  }
+}

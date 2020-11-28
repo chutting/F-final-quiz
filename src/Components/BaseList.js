@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
-import '../style/header.css';
 import http from '../utils/http';
 import Item from './Item';
 
