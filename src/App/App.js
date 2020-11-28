@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Header from '../Components/Header'
-import StudentList from '../Components/StudentsList';
+import Header from '../Components/Header';
+import BaseList from '../Components/BaseList';
+import GroupsList from '../Components/GroupsList';
+import { autoGrouping } from '../actions/groups';
 
 class App extends Component {
-  state = {
-    studentList: []
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:8080/students', {
-      method: 'GET',
-      mode: 'cors'
-    }).then(response => {
-      if (response.status === 200) {
-        return response.json();
-      }
-    }).then(data => {
-      this.setState({
-        studentList: data
-      })
-    });
-  }
+  handleAutoGrouping = () => {
+    autoGrouping();
+  };
 
   render() {
     return (
       <div className="main-container">
-        <Header dataSource={this.state.studentList}/>
-        <StudentList dataSource={this.state.studentList}/>
+        <header>
+          <Header onClickGrouping={this.handleAutoGrouping} />
+        </header>
+        <main>
+          <GroupsList />
+          <BaseList target="trainers" />
+          <BaseList target="trainees" />
+        </main>
       </div>
     );
   }
