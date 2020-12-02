@@ -10,6 +10,7 @@ class Item extends Component {
 
   handleDeleteItem = () => {
     const { target, data } = this.props;
+    // TODO GTB-完成度: - 删除之后，应该重新请求列表API， 而不是reload页面
     http.delete(`/${target}/${data.id}`);
   };
 

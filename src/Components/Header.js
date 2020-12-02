@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// TODO GTB-工程实践: - 组件命名不合理。Header有特定的意义。
 class Header extends Component {
   render() {
     return (

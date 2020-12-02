@@ -13,6 +13,7 @@ class BaseList extends Component {
 
   componentDidMount() {
     const { target } = this.props;
+    // TODO GTB-知识点: - 应该使用状态提升，把数据提升到App组件，因为分组的行为会触发讲师和学员列表的更新
     http.get(`/${target}?grouped=false`).then((data) => {
       this.setState({
         listData: data,
@@ -42,6 +43,7 @@ class BaseList extends Component {
     const { target } = this.props;
     const targetString = target === 'trainees' ? '学员' : '讲师';
     return (
+        //  TODO feedback: 没有使用section标签
       <div className="base-list">
         <h1>{`${targetString}列表`}</h1>
         <main className="base-list-main">
